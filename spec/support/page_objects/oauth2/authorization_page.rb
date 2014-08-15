@@ -26,27 +26,3 @@ class OAuth2::AuthorizationPage < SitePrism::Page
   element :public_nav, "#public-nav"
   element :ownership, "footer[contains('MyUSA is an official website of the United States Government')]"
 end
-
-
-
-html, body {
-  font-family: 'Open Sans', 'sans-serif';  
-  height: 100%;
-}
-
-.container:first-child{
-  min-height:100%;
-}
-
-.main {
-  position: relative;
-  margin-top: 5%;
-  left: 50%;
-  margin-left: -410px;
-  padding-left: 150px;
-  padding-right: 150px;
-  height: auto;
-  width: 820px;
-  z-index: 10;
-  /*box-shadow: 1px 1px 1px #888888;*/
-}
