@@ -12,7 +12,7 @@ module OauthHelper
     if value.present?
       return current_user.profile.send(field)
     else
-      options.merge!(placeholder: t("scopes.#{scope}.placeholder"), disabled: value.present?)
+      options.merge!(placeholder: t("scopes.#{scope}.placeholder"))
       text_field_tag "profile[#{field}]", current_user.profile.send(field), options
     end
   end
