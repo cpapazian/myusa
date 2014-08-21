@@ -56,8 +56,9 @@ describe 'OAuth' do
         visit_oauth_authorize_url
       end
 
-      scenario 'redirects to login page' do
+      scenario 'redirects to login page, displays explanation' do
         @sign_in_page = SignInPage.new
+        expect(@sign_in_page.flash_success_message).to have_content("Welcome, #{client_app.name} user")
         expect(@sign_in_page).to be_displayed
       end
 

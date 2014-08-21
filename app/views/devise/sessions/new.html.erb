@@ -1,3 +1,6 @@
+<% if @client %>
+  <%= link_to "&laquo; return to #{@client.name}".html_safe, @client.url, class: 'return-to' %>
+<% end %>
 <div class="row">
   <div class="main callout-box sign-in">
     <div class="row">

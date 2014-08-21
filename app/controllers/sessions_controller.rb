@@ -3,6 +3,18 @@ class SessionsController < Devise::SessionsController
 
   before_action :authenticate_user_from_token!, only: [:new]
 
+  def new
+    if !!find_client_id
+      @client = Doorkeeper::Application.find_by_uid(find_client_id)
+      flash.now[:success] = "<b>Welcome, #{@client.name} user.</b><br/>" \
+                            "Use this form to connect #{@client.name} to a MyUSA account " \
+                            "and we'll have you back to #{@client.name} in no time.".html_safe
+    end    
+
+    super
+  end
+
+
   def create
     user = User.find_by_email(params[:user][:email]) ||
            User.create!(email: params[:user][:email])
@@ -14,6 +26,12 @@ class SessionsController < Devise::SessionsController
   end
 
   private
+
+  def find_client_id
+    client_id = (session[:user_return_to] || '').match(/[\?&;]client_id=([^&;]+)/).try(:[], 1)
+    client_id = @pre_auth.client.try(:uid) if client_id.blank? && @pre_auth
+    client_id
+  end
 
   def authenticate_user_from_token!
     user_email = params[:email].presence

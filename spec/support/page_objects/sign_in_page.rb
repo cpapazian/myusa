@@ -14,4 +14,5 @@ class SignInPage < SitePrism::Page
   element :less_options_link,	'.less-options button'
   element :submit, 		'.hidden-buttons input[value="Connect"]'
   element :alert,      '.alert'
+  element :flash_success_message, "div.alert.alert-success"
 end
