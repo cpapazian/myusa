@@ -1,6 +1,6 @@
 <% flash.each do |key, value| %>
   <div class="alert alert-<%=standard_flash(key)%>">
-    <a href="#" data-dismiss="alert" class="close">×</a>
+    <a href="#" data-dismiss="alert" class="close"><span class='glyphicon glyphicon-remove-sign'></span></a>
     	<%= value %>
   </div>
 <% end %>
