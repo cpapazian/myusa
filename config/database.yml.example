@@ -15,9 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
 # For other systems, such as Mac OS:
-#  socket: /tmp/mysql.sock
 
 development:
   <<: *default

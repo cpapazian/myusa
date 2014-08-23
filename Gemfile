@@ -1,11 +1,11 @@
-# source 'https://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '~> 4.1.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 gem 'mysql2'
 
 ## app dependencies
@@ -51,18 +51,18 @@ group :deploy do
 end
 
 group :development, :test do
-  gem 'awesome_print'
-  gem 'brakeman', require: false
-  gem 'crack'
-  gem 'guard'
-  gem 'guard-brakeman'
-  gem 'guard-migrate'
-  gem 'guard-rspec'
-  gem 'pry-rails'
+  # gem 'awesome_print'
+  # gem 'brakeman', require: false
+  # gem 'crack'
+  # gem 'guard'
+  # gem 'guard-brakeman'
+  # gem 'guard-migrate'
+  # gem 'guard-rspec'
+  # gem 'pry-rails'
   # this fork of pry-plus is 2.1.x-compatible
-  gem 'pry-plus', git: 'https://github.com/avantcredit/pry-plus.git'
+  # gem 'pry-plus', git: 'https://github.com/avantcredit/pry-plus.git'
 #  gem 'rspec_api_blueprint', require: false
-  gem 'better_errors'
+  # gem 'better_errors'
 end
 
 group :test do
@@ -72,13 +72,13 @@ group :test do
   gem 'factory_girl_rails'
   gem 'site_prism'
   gem 'fakeweb'
-  gem 'launchy'
+  # gem 'launchy'
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'shoulda-matchers'
-  gem 'simplecov', require: false
-  gem 'simplecov-csv', require: false
-  gem 'rspec_junit_formatter', require: false # used by Shippable
+  # gem 'simplecov', require: false
+  # gem 'simplecov-csv', require: false
+  # gem 'rspec_junit_formatter', require: false # used by Shippable
   gem 'timecop'
   gem 'capybara-email'
   gem 'oauth2'

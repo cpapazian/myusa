@@ -10,3 +10,4 @@ bundler_args: --without production development staging deploy
 before_script:
   - cp config/database.yml.example config/database.yml
   - cp config/secrets.yml.example config/secrets.yml
+  - RAILS_ENV=test bundle exec rake db:setup
