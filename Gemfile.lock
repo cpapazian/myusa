@@ -22,7 +22,6 @@ GIT
       pry-stack_explorer
 
 GEM
-  remote: https://rubygems.org/
   specs:
     actionmailer (4.1.5)
       actionpack (= 4.1.5)
