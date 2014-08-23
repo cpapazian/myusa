@@ -3,9 +3,10 @@ rvm:
   - 2.1.2
 services:
   - mysql
-bundler_args: --without production development staging deploy
 before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc' # skip installing docs for gems
+  - bundle config build.nokogiri --use-system-libraries
+bundler_args: --without production development staging deploy
 before_script:
   - cp config/database.yml.example config/database.yml
   - cp config/secrets.yml.example config/secrets.yml
