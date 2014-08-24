@@ -1,14 +1,4 @@
 GIT
-  remote: git://github.com/matschaffer/knife-solo.git
-  revision: 865f09ef169e3bb136ebf120d0ddd9ca4052db85
-  submodules: true
-  specs:
-    knife-solo (0.5.0)
-      chef (>= 10.12)
-      erubis (~> 2.7.0)
-      net-ssh (>= 2.2.2, < 3.0)
-
-GIT
   remote: https://github.com/avantcredit/pry-plus.git
   revision: 9170ad3bc651b09c1185badd74553b1b37e3505c
   specs:
@@ -51,9 +41,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    akami (1.2.2)
-      gyoku (>= 0.4.0)
-      nokogiri
     arel (5.0.1.20140414130214)
     ast (2.0.0)
     attr_encrypted (1.3.2)
@@ -175,15 +162,9 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    em-winrm (0.5.5)
-      eventmachine (~> 1.0.0)
-      mixlib-log (>= 1.3.0)
-      uuidtools (~> 2.1.1)
-      winrm (~> 1.1.2)
     encryptor (1.3.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
-    excon (0.31.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
@@ -197,20 +178,9 @@ GEM
     ffi-yajl (1.0.2)
       ffi (~> 1.5)
       libyajl2 (~> 1.0)
-    fog (1.20.0)
-      builder
-      excon (~> 0.31.0)
-      formatador (~> 0.2.0)
-      mime-types
-      multi_json (~> 1.0)
-      net-scp (~> 1.1)
-      net-ssh (>= 2.1.3)
-      nokogiri (>= 1.5.11)
     font-awesome-sass (4.1.0)
       sass (~> 3.2)
     formatador (0.2.5)
-    gssapi (1.0.3)
-      ffi (>= 1.0.1)
     guard (2.6.1)
       formatador (>= 0.2.4)
       listen (~> 2.7)
@@ -221,16 +191,11 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
-    gyoku (1.1.1)
-      builder (>= 2.1.2)
     hashie (2.1.2)
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
-    httpclient (2.4.0)
-    httpi (0.9.7)
-      rack
     i18n (0.6.11)
     interception (0.5)
     ipaddress (0.8.0)
@@ -242,12 +207,6 @@ GEM
     json (1.8.1)
     jwt (1.0.0)
     kgio (2.9.2)
-    knife-ec2 (0.8.0)
-      fog (~> 1.20.0)
-      knife-windows (>= 0.5.12)
-    knife-solo_data_bag (1.1.0)
-    knife-windows (0.6.0)
-      em-winrm (~> 0.5, >= 0.5.4)
     launchy (2.4.2)
       addressable (~> 2.3)
     letter_opener (1.2.0)
@@ -257,10 +216,6 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    little-plugger (1.1.3)
-    logging (1.8.2)
-      little-plugger (>= 1.1.3)
-      multi_json (>= 1.8.4)
     lumberjack (1.0.9)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -295,7 +250,6 @@ GEM
     nio4r (1.0.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
-    nori (1.1.5)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -443,21 +397,12 @@ GEM
     ruby-progressbar (1.5.1)
     ruby_parser (3.5.0)
       sexp_processor (~> 4.1)
-    rubyntlm (0.1.1)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    savon (0.9.5)
-      akami (~> 1.0)
-      builder (>= 2.1.2)
-      gyoku (>= 0.4.0)
-      httpi (~> 0.9)
-      nokogiri (>= 1.4.0)
-      nori (~> 1.0)
-      wasabi (~> 1.0)
     sawyer (0.5.5)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -520,24 +465,13 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    uuidtools (2.1.5)
     validates_email_format_of (1.5.3)
     varia_model (0.4.0)
       buff-extensions (~> 1.0)
       hashie (>= 2.0.2, < 3.0.0)
     warden (1.2.3)
       rack (>= 1.0)
-    wasabi (1.0.0)
-      nokogiri (>= 1.4.0)
     websocket-driver (0.3.4)
-    winrm (1.1.3)
-      gssapi (~> 1.0.0)
-      httpclient (~> 2.2, >= 2.2.0.2)
-      logging (~> 1.6, >= 1.6.1)
-      nokogiri (~> 1.5)
-      rubyntlm (~> 0.1.1)
-      savon (= 0.9.5)
-      uuidtools (~> 2.1.2)
     wmi-lite (1.0.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -565,9 +499,6 @@ DEPENDENCIES
   font-awesome-sass
   guard-livereload
   jquery-rails
-  knife-ec2
-  knife-solo!
-  knife-solo_data_bag
   letter_opener
   mysql2
   newrelic_rpm

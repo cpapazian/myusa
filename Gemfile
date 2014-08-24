@@ -41,9 +41,9 @@ end
 group :deploy do
   gem 'berkshelf', '~> 3.0'
   gem 'chef'
-  gem 'knife-ec2'
-  gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
-  gem 'knife-solo_data_bag'
+  # gem 'knife-ec2'
+  # gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
+  # gem 'knife-solo_data_bag'
   gem 'unf'
   gem 'capistrano', '~> 2.15'
   gem 'capistrano-unicorn', :require => false
