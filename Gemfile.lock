@@ -8,6 +8,19 @@ GIT
       erubis (~> 2.7.0)
       net-ssh (>= 2.2.2, < 3.0)
 
+GIT
+  remote: https://github.com/avantcredit/pry-plus.git
+  revision: 9170ad3bc651b09c1185badd74553b1b37e3505c
+  specs:
+    pry-plus (1.0.1)
+      bond
+      jist
+      pry-byebug
+      pry-doc
+      pry-docmore
+      pry-rescue
+      pry-stack_explorer
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -65,6 +78,13 @@ GEM
       thor (~> 0.18)
     berkshelf-api-client (1.2.0)
       faraday (~> 0.9.0)
+    better_errors (2.0.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
+    bond (0.5.1)
     bootstrap-sass (3.2.0.1)
       sass (~> 3.2)
     buff-config (1.0.1)
@@ -76,6 +96,9 @@ GEM
     buff-shell_out (0.2.0)
       buff-ruby_engine (~> 0.1.0)
     builder (3.2.2)
+    byebug (2.7.0)
+      columnize (~> 0.3)
+      debugger-linecache (~> 1.2)
     capistrano (2.15.5)
       highline
       net-scp (>= 1.0.0)
@@ -130,8 +153,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.1)
+    columnize (0.8.9)
     daemons (1.1.9)
     database_cleaner (1.3.0)
+    debug_inspector (0.0.2)
+    debugger-linecache (1.2.0)
     dep-selector-libgecode (1.0.2)
     dep_selector (1.0.3)
       dep-selector-libgecode (~> 1.0)
@@ -143,6 +169,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     doorkeeper (1.4.0)
       railties (>= 3.1)
     em-websocket (0.5.1)
@@ -205,7 +232,10 @@ GEM
     httpi (0.9.7)
       rack
     i18n (0.6.11)
+    interception (0.5)
     ipaddress (0.8.0)
+    jist (1.5.1)
+      json
     jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -317,6 +347,23 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (1.3.3)
+      byebug (~> 2.7)
+      pry (~> 0.10)
+    pry-doc (0.6.0)
+      pry (~> 0.9)
+      yard (~> 0.8)
+    pry-docmore (0.1.1)
+      pry
+      pry-doc
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
+    pry-stack_explorer (0.4.9.1)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -422,6 +469,13 @@ GEM
     sexp_processor (4.4.4)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
+    simplecov (0.9.0)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-csv (0.1.3)
+      simplecov
+    simplecov-html (0.8.0)
     site_prism (2.6)
       addressable (~> 2.3.3)
       capybara (>= 2.1, < 3.0)
@@ -487,6 +541,7 @@ GEM
     wmi-lite (1.0.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -495,6 +550,7 @@ DEPENDENCIES
   attr_encrypted
   autoprefixer-rails
   berkshelf (~> 3.0)
+  better_errors
   bootstrap-sass (~> 3.2.0)
   capistrano (~> 2.15)
   capistrano-unicorn
@@ -521,6 +577,8 @@ DEPENDENCIES
   omniauth-openid
   permanent_records (~> 2.3.0)
   poltergeist
+  pry-plus!
+  pry-rails
   quiet_assets
   rails (~> 4.1.0)
   rspec-its
@@ -531,6 +589,8 @@ DEPENDENCIES
   sdoc
   secure_headers
   shoulda-matchers
+  simplecov
+  simplecov-csv
   site_prism
   thin
   timecop
