@@ -41,18 +41,18 @@ end
 group :deploy do
   gem 'berkshelf', '~> 3.0'
   gem 'chef'
-  # gem 'knife-ec2'
-  # gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
-  # gem 'knife-solo_data_bag'
+  gem 'knife-ec2'
+  gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
+  gem 'knife-solo_data_bag'
   gem 'unf'
   gem 'capistrano', '~> 2.15'
   gem 'capistrano-unicorn', :require => false
 end
 
 group :development, :test do
-  gem 'pry-rails'
+  # gem 'pry-rails'
   # this fork of pry-plus is 2.1.x-compatible
-  gem 'pry-plus', git: 'https://github.com/avantcredit/pry-plus.git'
+  # gem 'pry-plus', git: 'https://github.com/avantcredit/pry-plus.git'
   gem 'better_errors'
   gem 'oauth2'
 end
