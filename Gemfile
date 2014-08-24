@@ -69,8 +69,8 @@ group :test do
   gem 'shoulda-matchers'
   gem 'timecop'
   gem 'capybara-email'
-  gem 'simplecov', require: false
-  gem 'simplecov-csv', require: false
+  # gem 'simplecov', require: false
+  # gem 'simplecov-csv', require: false
 end
 
 group :staging, :production do
