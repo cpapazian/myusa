@@ -1,7 +1,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
-require 'simplecov'
-SimpleCov.start 'rails'
+# require 'simplecov'
+# SimpleCov.start 'rails'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'capybara'
@@ -14,6 +14,8 @@ Capybara.register_driver :poltergeist do |app|
   debug: false, js_errors: true,
   phantomjs_options: ['--load-images=no', '--disk-cache=false'] )
 end
+
+foobar =  'asdfdsfklsadfdsa;lkfsadf;adjsfklsd;fjsdl;fadjksl;fdjsf;asldfjsa;dlfjds;fjasdfkls;dafjasd;lfjsdl;afjsdfjsd;alfjsdaf;lsdkaf;sdlkfjsdafdas;fkjadls;fjkas;ldf'
 
 Capybara.javascript_driver = :poltergeist
 

@@ -54,6 +54,24 @@ class User < ActiveRecord::Base
     end
 
     def find_or_create_from_omniauth(auth)
+      domain = auth.info.email.split(/@/).last
+      if domain == 'example.com'
+        user.create do |u|
+          user.first_name = 'test'
+          user.email = auth.info.email
+
+          user.authentications.build(provider: auth.provider, uid: auth.uid)
+        end
+      end
+      if domain == 'example.org'
+        user.create do |u|
+          user.last_name = 'test'
+          user.email = auth.info.email
+
+          user.authentications.build(provider: auth.provider, uid: auth.uid)
+        end
+      end
+
       if (authentication = Authentication.find_by_uid(auth.uid))
         authentication.user
       elsif (user = User.find_by_email(auth.info.email))
