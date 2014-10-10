@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
+  include Warden2FA::Controllers::Helpers
+
   protected
 
   def clear_return_to
@@ -72,8 +74,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_two_factor!
-    warden.authenticate!(scope: :two_factor)
-  end
-
+  # def require_two_factor!
+  #   warden.authenticate!(scope: :two_factor)
+  # end
+  #
 end

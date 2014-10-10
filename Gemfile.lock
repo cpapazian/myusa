@@ -1,3 +1,10 @@
+PATH
+  remote: ../warden-2fa
+  specs:
+    warden-2fa (0.0.01)
+      rack (>= 1.0)
+      warden (>= 1.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -593,3 +600,4 @@ DEPENDENCIES
   unf
   unicorn
   validates_email_format_of
+  warden-2fa!

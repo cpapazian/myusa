@@ -25,6 +25,9 @@ gem 'premailer-rails'
 gem 'twilio-ruby'
 gem 'bootstrap_tokenfield_rails'
 
+gem 'warden-2fa', path: '../warden-2fa'
+
+
 # TODO: Check this again soon for a new release (after 9/1/14) -- Yoz
 gem 'validates_email_format_of'
 

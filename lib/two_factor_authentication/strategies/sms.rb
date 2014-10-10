@@ -1,8 +1,6 @@
-require 'two_factor_authentication/strategies/base'
-
 module TwoFactorAuthentication
   module Strategies
-    class Sms < Base
+    class Sms < Warden2FA::Strategies::Base
       def valid?
         super && authentication_code.present?
       end
